@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SnowflakeId 配置 | CosId</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <script>
+    (function (global, doc, tag, src, script, m) {
+      script = doc.createElement(tag)
+      m = doc.getElementsByTagName(tag)[0]
+      script.async = 1
+      script.src = src
+      m.parentNode.insertBefore(script, m)
+      global.dataLayer = global.dataLayer || []
+      if (!global.gtag) {
+        global.gtag = function gtag () {
+          global.dataLayer.push(arguments)
+        }
+        global.gtag('js', new Date())
+        global.gtag('config', 'G-SP6EEGK56L')
+      }
+    })(window, document, 'script', 'https://www.googletagmanager.com/gtag/js?id=G-SP6EEGK56L')
+</script>
+    <meta name="description" content="通用、灵活、高性能分布式 ID 生成器">
+    
+    <link rel="preload" href="/assets/css/0.styles.1b8f0889.css" as="style"><link rel="preload" href="/assets/js/app.c699c5d8.js" as="script"><link rel="preload" href="/assets/js/4.0684c13d.js" as="script"><link rel="preload" href="/assets/js/14.e01acfaa.js" as="script"><link rel="prefetch" href="/assets/js/10.b4f64af2.js"><link rel="prefetch" href="/assets/js/11.60e271b2.js"><link rel="prefetch" href="/assets/js/12.cae710f0.js"><link rel="prefetch" href="/assets/js/13.fff1a3ce.js"><link rel="prefetch" href="/assets/js/15.0097e48b.js"><link rel="prefetch" href="/assets/js/16.dca318eb.js"><link rel="prefetch" href="/assets/js/17.c32d4e56.js"><link rel="prefetch" href="/assets/js/18.c0c534ff.js"><link rel="prefetch" href="/assets/js/19.e02aaf84.js"><link rel="prefetch" href="/assets/js/20.348a8a7e.js"><link rel="prefetch" href="/assets/js/21.ecb42036.js"><link rel="prefetch" href="/assets/js/22.427e4ca3.js"><link rel="prefetch" href="/assets/js/23.84c6ec3a.js"><link rel="prefetch" href="/assets/js/24.a78b5423.js"><link rel="prefetch" href="/assets/js/25.2484463d.js"><link rel="prefetch" href="/assets/js/26.637d16c8.js"><link rel="prefetch" href="/assets/js/27.7eb99209.js"><link rel="prefetch" href="/assets/js/28.962f8fd3.js"><link rel="prefetch" href="/assets/js/29.84117f77.js"><link rel="prefetch" href="/assets/js/30.fe824b75.js"><link rel="prefetch" href="/assets/js/31.3b430078.js"><link rel="prefetch" href="/assets/js/32.f3b274d5.js"><link rel="prefetch" href="/assets/js/33.473633ec.js"><link rel="prefetch" href="/assets/js/34.ab2f5c85.js"><link rel="prefetch" href="/assets/js/35.1b9ae436.js"><link rel="prefetch" href="/assets/js/5.34582ba7.js"><link rel="prefetch" href="/assets/js/6.4b5ddda9.js"><link rel="prefetch" href="/assets/js/7.89b46560.js"><link rel="prefetch" href="/assets/js/8.cada40cd.js"><link rel="prefetch" href="/assets/js/9.3ba7d700.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.aec8ec70.js"><link rel="prefetch" href="/assets/js/vendors~notification.4573acaf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1b8f0889.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">CosId</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link router-link-active">
+  配置
+</a></div><div class="nav-item"><a href="/guide/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/guide/faq/" class="nav-link">
+  常见问题
+</a></div><div class="nav-item"><a href="/guide/perf-test/" class="nav-link">
+  性能评测
+</a></div><div class="nav-item"><a href="https://github.com/Ahoo-Wang/CosId/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  更新日志
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/Ahoo-Wang/CosId" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link router-link-active">
+  配置
+</a></div><div class="nav-item"><a href="/guide/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/guide/faq/" class="nav-link">
+  常见问题
+</a></div><div class="nav-item"><a href="/guide/perf-test/" class="nav-link">
+  性能评测
+</a></div><div class="nav-item"><a href="https://github.com/Ahoo-Wang/CosId/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  更新日志
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/Ahoo-Wang/CosId" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>配置</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/config/" aria-current="page" class="sidebar-link">基础配置</a></li><li><a href="/config/snowflake.html" aria-current="page" class="active sidebar-link">SnowflakeId 配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/config/snowflake.html#clockbackwards" class="sidebar-link">ClockBackwards</a></li><li class="sidebar-sub-header"><a href="/config/snowflake.html#machine" class="sidebar-link">Machine</a></li><li class="sidebar-sub-header"><a href="/config/snowflake.html#iddefinition" class="sidebar-link">IdDefinition</a></li></ul></li><li><a href="/config/segment.html" class="sidebar-link">SegmentId 配置</a></li><li><a href="/config/zookeeper.html" class="sidebar-link">ZooKeeper 配置</a></li><li><a href="/config/shardingsphere.html" class="sidebar-link">ShardingSphere 配置</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="snowflakeid-配置"><a href="#snowflakeid-配置" class="header-anchor">#</a> SnowflakeId 配置</h1> <blockquote><p><code>me.ahoo.cosid.spring.boot.starter.snowflake.SnowflakeIdProperties</code></p></blockquote> <table><thead><tr><th>名称</th> <th>数据类型</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td>enabled</td> <td><code>boolean</code></td> <td>是否启用</td> <td><code>false</code></td></tr> <tr><td>zone-id</td> <td><code>String</code></td> <td>时区</td> <td><code>ZoneId.systemDefault().getId()</code></td></tr> <tr><td>epoch</td> <td><code>long</code></td> <td>EPOCH</td> <td><code>CosId.COSID_EPOCH</code> <br> (UTC 2019-12-24 16:00)</td></tr> <tr><td>clock-backwards</td> <td><code>ClockBackwards</code></td> <td>时钟回拨配置</td> <td></td></tr> <tr><td>machine</td> <td><code>Machine</code></td> <td>机器号分配器配置</td> <td></td></tr> <tr><td>share</td> <td><code>IdDefinition</code></td> <td>共享ID生成器配置</td> <td>有</td></tr> <tr><td>provider</td> <td><code>Map&lt;String, IdDefinition&gt;</code></td> <td>多ID生成器配置</td> <td><code>null</code></td></tr></tbody></table> <h2 id="clockbackwards"><a href="#clockbackwards" class="header-anchor">#</a> ClockBackwards</h2> <blockquote><p><code>me.ahoo.cosid.spring.boot.starter.snowflake.SnowflakeIdProperties.ClockBackwards</code></p></blockquote> <table><thead><tr><th>名称</th> <th>数据类型</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td>spin-threshold</td> <td><code>int</code></td> <td>自旋同步阈值（ms）</td> <td><code>10</code></td></tr> <tr><td>broken-threshold</td> <td><code>int</code></td> <td>抛出异常（<code>ClockTooManyBackwardsException</code>）阈值（ms）</td> <td><code>2000</code></td></tr></tbody></table> <h2 id="machine"><a href="#machine" class="header-anchor">#</a> Machine</h2> <blockquote><p><code>me.ahoo.cosid.spring.boot.starter.snowflake.SnowflakeIdProperties.Machine</code></p></blockquote> <table><thead><tr><th>名称</th> <th>数据类型</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td>stable</td> <td><code>boolean</code></td> <td>是否为稳定的实例,稳定实例将不回收机器号</td> <td><code>false</code></td></tr> <tr><td>port</td> <td><code>Integer</code></td> <td>端口号</td> <td>进程ID（PID）</td></tr> <tr><td>instanceId</td> <td><code>String</code></td> <td>应用实例编号(全局唯一)</td> <td>应用IP:PID</td></tr> <tr><td>machineBit</td> <td><code>int</code></td> <td>机器位数</td> <td><code>10</code></td></tr> <tr><td>stateStorage</td> <td><code>Machine.StateStorage</code></td> <td>机器状态存储</td> <td></td></tr> <tr><td>distributor</td> <td><code>Machine.Distributor</code></td> <td>机器号分发器</td> <td></td></tr></tbody></table> <h3 id="machine-statestorage"><a href="#machine-statestorage" class="header-anchor">#</a> Machine.StateStorage</h3> <table><thead><tr><th>名称</th> <th>数据类型</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td>enabled</td> <td><code>boolean</code></td> <td>是否启用状态存储</td> <td><code>true</code></td></tr> <tr><td>local</td> <td><code>Machine.StateStorage.Local</code></td> <td>本地机器状态存储配置</td> <td></td></tr></tbody></table> <h4 id="machine-statestorage-local"><a href="#machine-statestorage-local" class="header-anchor">#</a> Machine.StateStorage.Local</h4> <table><thead><tr><th>名称</th> <th>数据类型</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td>state-location</td> <td><code>String</code></td> <td>状态存储位置</td> <td><code>./cosid-machine-state/</code></td></tr></tbody></table> <h3 id="machine-distributor"><a href="#machine-distributor" class="header-anchor">#</a> Machine.Distributor</h3> <table><thead><tr><th>名称</th> <th>数据类型</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td>type</td> <td><code>Machine.Distributor.Type</code></td> <td>机器号分配器类型：<code>MANUAL</code>/<code>STATEFUL_SET</code>/<code>JDBC</code>/<code>REDIS</code>/<code>ZOOKEEPER</code></td> <td><code>MANUAL</code></td></tr> <tr><td>manual</td> <td><code>Machine.Distributor.Manual</code></td> <td>手动分配器配置</td> <td></td></tr></tbody></table> <h4 id="machine-distributor-manual"><a href="#machine-distributor-manual" class="header-anchor">#</a> Machine.Distributor.Manual</h4> <table><thead><tr><th>名称</th> <th>数据类型</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td>machineId</td> <td><code>Integer</code></td> <td>机器号</td> <td><code>null</code></td></tr></tbody></table> <h2 id="iddefinition"><a href="#iddefinition" class="header-anchor">#</a> IdDefinition</h2> <blockquote><p><code>me.ahoo.cosid.spring.boot.starter.snowflake.SnowflakeIdProperties.IdDefinition</code></p></blockquote> <table><thead><tr><th>名称</th> <th>数据类型</th> <th>说明</th> <th>默认值</th></tr></thead> <tbody><tr><td>clock-sync</td> <td><code>boolean</code></td> <td>是否开启时钟同步</td> <td><code>true</code></td></tr> <tr><td>friendly</td> <td><code>boolean</code></td> <td>是否启用<code>SnowflakeFriendlyId</code></td> <td><code>true</code></td></tr> <tr><td>timestamp-unit</td> <td><code>IdDefinition.TimestampUnit</code></td> <td>时间戳位的单位：<code>SECOND</code> / <code>MILLISECOND</code></td> <td><code>TimestampUnit.MILLISECOND</code></td></tr> <tr><td>epoch</td> <td><code>int</code></td> <td>EPOCH</td> <td><code>cosid.snowflake.epoch</code></td></tr> <tr><td>timestamp-bit</td> <td><code>int</code></td> <td>时间戳位数</td> <td>41</td></tr> <tr><td>machine-bit</td> <td><code>int</code></td> <td>机器位数</td> <td><code>cosid.snowflake.machine.machine-bit</code></td></tr> <tr><td>sequence-bit</td> <td><code>int</code></td> <td>序列位数</td> <td>12</td></tr> <tr><td>converter</td> <td><code>IdConverterDefinition</code></td> <td>Id转换器配置</td> <td></td></tr></tbody></table> <p><strong>YAML 配置样例</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">cosid</span><span class="token punctuation">:</span>
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span>spring.application.name<span class="token punctuation">}</span>
+  <span class="token key atrule">snowflake</span><span class="token punctuation">:</span>
+    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">zone-id</span><span class="token punctuation">:</span> Asia/Shanghai
+    <span class="token key atrule">epoch</span><span class="token punctuation">:</span> <span class="token number">1577203200000</span>
+    <span class="token key atrule">clock-backwards</span><span class="token punctuation">:</span>
+      <span class="token key atrule">spin-threshold</span><span class="token punctuation">:</span> <span class="token number">10</span>
+      <span class="token key atrule">broken-threshold</span><span class="token punctuation">:</span> <span class="token number">2000</span>
+    <span class="token key atrule">machine</span><span class="token punctuation">:</span>
+      <span class="token key atrule">distributor</span><span class="token punctuation">:</span>
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> redis
+      <span class="token key atrule">state-storage</span><span class="token punctuation">:</span>
+        <span class="token key atrule">local</span><span class="token punctuation">:</span>
+          <span class="token key atrule">state-location</span><span class="token punctuation">:</span> ./cosid<span class="token punctuation">-</span>machine<span class="token punctuation">-</span>state/
+    <span class="token key atrule">share</span><span class="token punctuation">:</span>
+      <span class="token key atrule">clock-sync</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token key atrule">friendly</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">provider</span><span class="token punctuation">:</span>
+      <span class="token key atrule">short_id</span><span class="token punctuation">:</span>
+        <span class="token key atrule">converter</span><span class="token punctuation">:</span>
+          <span class="token key atrule">prefix</span><span class="token punctuation">:</span> cosid_
+          <span class="token key atrule">type</span><span class="token punctuation">:</span> radix
+          <span class="token key atrule">radix</span><span class="token punctuation">:</span>
+            <span class="token key atrule">char-size</span><span class="token punctuation">:</span> <span class="token number">11</span>
+            <span class="token key atrule">pad-start</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+      <span class="token key atrule">safe-js</span><span class="token punctuation">:</span>
+        <span class="token key atrule">machine-bit</span><span class="token punctuation">:</span> <span class="token number">3</span>
+        <span class="token key atrule">sequence-bit</span><span class="token punctuation">:</span> <span class="token number">9</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ahoo-Wang/CosId/edit/main/document/docs/config/snowflake.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/22/2022, 6:01:36 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/config/" class="prev router-link-active">
+        基础配置
+      </a></span> <span class="next"><a href="/config/segment.html">
+        SegmentId 配置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.c699c5d8.js" defer></script><script src="/assets/js/4.0684c13d.js" defer></script><script src="/assets/js/14.e01acfaa.js" defer></script>
+  </body>
+</html>

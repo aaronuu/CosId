@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JMH-Benchmark | CosId</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <script>
+    (function (global, doc, tag, src, script, m) {
+      script = doc.createElement(tag)
+      m = doc.getElementsByTagName(tag)[0]
+      script.async = 1
+      script.src = src
+      m.parentNode.insertBefore(script, m)
+      global.dataLayer = global.dataLayer || []
+      if (!global.gtag) {
+        global.gtag = function gtag () {
+          global.dataLayer.push(arguments)
+        }
+        global.gtag('js', new Date())
+        global.gtag('config', 'G-SP6EEGK56L')
+      }
+    })(window, document, 'script', 'https://www.googletagmanager.com/gtag/js?id=G-SP6EEGK56L')
+</script>
+    <meta name="description" content="通用、灵活、高性能分布式 ID 生成器">
+    
+    <link rel="preload" href="/assets/css/0.styles.1b8f0889.css" as="style"><link rel="preload" href="/assets/js/app.c699c5d8.js" as="script"><link rel="preload" href="/assets/js/4.0684c13d.js" as="script"><link rel="preload" href="/assets/js/33.473633ec.js" as="script"><link rel="prefetch" href="/assets/js/10.b4f64af2.js"><link rel="prefetch" href="/assets/js/11.60e271b2.js"><link rel="prefetch" href="/assets/js/12.cae710f0.js"><link rel="prefetch" href="/assets/js/13.fff1a3ce.js"><link rel="prefetch" href="/assets/js/14.e01acfaa.js"><link rel="prefetch" href="/assets/js/15.0097e48b.js"><link rel="prefetch" href="/assets/js/16.dca318eb.js"><link rel="prefetch" href="/assets/js/17.c32d4e56.js"><link rel="prefetch" href="/assets/js/18.c0c534ff.js"><link rel="prefetch" href="/assets/js/19.e02aaf84.js"><link rel="prefetch" href="/assets/js/20.348a8a7e.js"><link rel="prefetch" href="/assets/js/21.ecb42036.js"><link rel="prefetch" href="/assets/js/22.427e4ca3.js"><link rel="prefetch" href="/assets/js/23.84c6ec3a.js"><link rel="prefetch" href="/assets/js/24.a78b5423.js"><link rel="prefetch" href="/assets/js/25.2484463d.js"><link rel="prefetch" href="/assets/js/26.637d16c8.js"><link rel="prefetch" href="/assets/js/27.7eb99209.js"><link rel="prefetch" href="/assets/js/28.962f8fd3.js"><link rel="prefetch" href="/assets/js/29.84117f77.js"><link rel="prefetch" href="/assets/js/30.fe824b75.js"><link rel="prefetch" href="/assets/js/31.3b430078.js"><link rel="prefetch" href="/assets/js/32.f3b274d5.js"><link rel="prefetch" href="/assets/js/34.ab2f5c85.js"><link rel="prefetch" href="/assets/js/35.1b9ae436.js"><link rel="prefetch" href="/assets/js/5.34582ba7.js"><link rel="prefetch" href="/assets/js/6.4b5ddda9.js"><link rel="prefetch" href="/assets/js/7.89b46560.js"><link rel="prefetch" href="/assets/js/8.cada40cd.js"><link rel="prefetch" href="/assets/js/9.3ba7d700.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.aec8ec70.js"><link rel="prefetch" href="/assets/js/vendors~notification.4573acaf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1b8f0889.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">CosId</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/guide/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/guide/faq/" class="nav-link">
+  常见问题
+</a></div><div class="nav-item"><a href="/guide/perf-test/" class="nav-link">
+  性能评测
+</a></div><div class="nav-item"><a href="https://github.com/Ahoo-Wang/CosId/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  更新日志
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/Ahoo-Wang/CosId" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/guide/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/guide/faq/" class="nav-link">
+  常见问题
+</a></div><div class="nav-item"><a href="/guide/perf-test/" class="nav-link">
+  性能评测
+</a></div><div class="nav-item"><a href="https://github.com/Ahoo-Wang/CosId/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  更新日志
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/Ahoo-Wang/CosId" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/guide/getting-started.html" class="sidebar-link">快速上手</a></li><li><a href="/guide/segment-chain.html" class="sidebar-link">号段链模式</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>集成</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/cosid-jdbc.html" class="sidebar-link">CosId-Jdbc 模块</a></li><li><a href="/guide/cosid-redis.html" class="sidebar-link">CosId-Redis 模块</a></li><li><a href="/guide/cosid-zookeeper.html" class="sidebar-link">CosId-ZooKeeper 模块</a></li><li><a href="/guide/cosid-jackson.html" class="sidebar-link">CosId-Jackson 模块</a></li><li><a href="/guide/cosid-mybatis.html" class="sidebar-link">CosId-MyBatis 模块</a></li><li><a href="/guide/cosid-shardingsphere.html" class="sidebar-link">CosId-ShardingSphere 模块</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/api/" class="sidebar-link">IdGenerator</a></li><li><a href="/guide/api/id-converter.html" class="sidebar-link">IdConverter</a></li><li><a href="/guide/api/provider.html" class="sidebar-link">IdGeneratorProvider</a></li><li><a href="/guide/api/snowflake.html" class="sidebar-link">SnowflakeId</a></li><li><a href="/guide/api/segment.html" class="sidebar-link">SegmentId</a></li><li><a href="/guide/api/cosid-annotation.html" class="sidebar-link">CosIdAnnotationSupport</a></li><li><a href="/guide/api/sharding.html" class="sidebar-link">Sharding</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>常见问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/faq.html" class="sidebar-link">常见问题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>性能评测</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/perf-test.html" aria-current="page" class="active sidebar-link">JMH-Benchmark</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/perf-test.html#运行环境说明" class="sidebar-link">运行环境说明</a></li><li class="sidebar-sub-header"><a href="/guide/perf-test.html#segmentchainid" class="sidebar-link">SegmentChainId</a></li><li class="sidebar-sub-header"><a href="/guide/perf-test.html#snowflakeid" class="sidebar-link">SnowflakeId</a></li><li class="sidebar-sub-header"><a href="/guide/perf-test.html#cosidintervalshardingalgorithm" class="sidebar-link">CosIdIntervalShardingAlgorithm</a></li><li class="sidebar-sub-header"><a href="/guide/perf-test.html#cosidmodshardingalgorithm" class="sidebar-link">CosIdModShardingAlgorithm</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jmh-benchmark"><a href="#jmh-benchmark" class="header-anchor">#</a> JMH-Benchmark</h1> <h2 id="运行环境说明"><a href="#运行环境说明" class="header-anchor">#</a> 运行环境说明</h2> <ul><li>基准测试运行环境：笔记本开发机 ( MacBook Pro (M1) )</li> <li>所有基准测试都在开发笔记本上执行。</li> <li><strong>Redis</strong>、<strong>MySql</strong> 部署环境也在该笔记本开发机上。</li></ul> <h2 id="segmentchainid"><a href="#segmentchainid" class="header-anchor">#</a> SegmentChainId</h2> <h3 id="吞吐量-ops-s"><a href="#吞吐量-ops-s" class="header-anchor">#</a> 吞吐量 (ops/s)</h3> <p align="center"><img src="/assets/perf/Throughput-Of-SegmentChainId.png" alt="Throughput-Of-SegmentChainId"></p> <div class="language-shell extra-class"><pre class="language-shell"><code>gradle cosid-redis:jmh
+<span class="token comment"># or</span>
+java -jar cosid-redis/build/libs/cosid-redis-1.8.6-jmh.jar -bm thrpt -wi <span class="token number">1</span> -rf json -f <span class="token number">1</span> RedisChainIdBenchmark
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>Benchmark                       (step)   Mode  Cnt          Score          Error  Units
+RedisChainIdBenchmark.generate       1  thrpt    5  106188349.580 ± 26035022.285  ops/s
+RedisChainIdBenchmark.generate     100  thrpt    5  112276460.950 ±  4091990.852  ops/s
+RedisChainIdBenchmark.generate    1000  thrpt    5  110181522.770 ± 15531341.449  ops/s
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code>gradle cosid-jdbc:jmh
+<span class="token comment"># or</span>
+java -jar cosid-jdbc/build/libs/cosid-jdbc-1.8.6-jmh.jar -bm thrpt -wi <span class="token number">1</span> -rf json -f <span class="token number">1</span> MySqlChainIdBenchmark
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>Benchmark                       (step)   Mode  Cnt          Score         Error  Units
+MySqlChainIdBenchmark.generate       1  thrpt    5  110020245.619 ± 4514432.472  ops/s
+MySqlChainIdBenchmark.generate     100  thrpt    5  111589201.024 ± 1565714.192  ops/s
+MySqlChainIdBenchmark.generate    1000  thrpt    5  115287146.614 ± 4471990.880  ops/s
+</code></pre></div><h3 id="每次操作耗时的百分位数-us-op"><a href="#每次操作耗时的百分位数-us-op" class="header-anchor">#</a> 每次操作耗时的百分位数(us/op)</h3> <blockquote><p><a href="https://zh.wikipedia.org/wiki/%E7%99%BE%E5%88%86%E4%BD%8D%E6%95%B0" target="_blank" rel="noopener noreferrer">百分位数<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> ，统计学术语，若将一组数据从小到大排序，并计算相应的累计百分点，则某百分点所对应数据的值，就称为这百分点的百分位数，以Pk表示第k百分位数。百分位数是用来比较个体在群体中的相对地位量数。</p></blockquote> <p align="center"><img src="/assets/perf/Percentile-Sample-Of-SegmentChainId.png" alt="Percentile-Sample-Of-SegmentChainId"></p> <div class="language-shell extra-class"><pre class="language-shell"><code>java -jar cosid-redis/build/libs/cosid-redis-1.8.6-jmh.jar -bm sample -wi <span class="token number">1</span> -rf json -f <span class="token number">1</span> -tu us step_1000
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>Benchmark                                            Mode      Cnt   Score    Error  Units
+RedisChainIdBenchmark.step_1000                    sample  1336271   0.024 ±  0.001  us/op
+RedisChainIdBenchmark.step_1000:step_1000·p0.00    sample              ≈ 0           us/op
+RedisChainIdBenchmark.step_1000:step_1000·p0.50    sample            0.041           us/op
+RedisChainIdBenchmark.step_1000:step_1000·p0.90    sample            0.042           us/op
+RedisChainIdBenchmark.step_1000:step_1000·p0.95    sample            0.042           us/op
+RedisChainIdBenchmark.step_1000:step_1000·p0.99    sample            0.042           us/op
+RedisChainIdBenchmark.step_1000:step_1000·p0.999   sample            0.042           us/op
+RedisChainIdBenchmark.step_1000:step_1000·p0.9999  sample            0.208           us/op
+RedisChainIdBenchmark.step_1000:step_1000·p1.00    sample           37.440           us/op
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code>java -jar cosid-jdbc/build/libs/cosid-jdbc-1.8.6-jmh.jar -bm sample -wi <span class="token number">1</span> -rf json -f <span class="token number">1</span> -tu us step_1000
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>Benchmark                                            Mode      Cnt    Score   Error  Units
+MySqlChainIdBenchmark.step_1000                    sample  1286774    0.024 ± 0.001  us/op
+MySqlChainIdBenchmark.step_1000:step_1000·p0.00    sample               ≈ 0          us/op
+MySqlChainIdBenchmark.step_1000:step_1000·p0.50    sample             0.041          us/op
+MySqlChainIdBenchmark.step_1000:step_1000·p0.90    sample             0.042          us/op
+MySqlChainIdBenchmark.step_1000:step_1000·p0.95    sample             0.042          us/op
+MySqlChainIdBenchmark.step_1000:step_1000·p0.99    sample             0.042          us/op
+MySqlChainIdBenchmark.step_1000:step_1000·p0.999   sample             0.083          us/op
+MySqlChainIdBenchmark.step_1000:step_1000·p0.9999  sample             0.208          us/op
+MySqlChainIdBenchmark.step_1000:step_1000·p1.00    sample           342.528          us/op
+</code></pre></div><h2 id="snowflakeid"><a href="#snowflakeid" class="header-anchor">#</a> SnowflakeId</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>gradle cosid-core:jmh
+<span class="token comment"># or</span>
+java -jar cosid-core/build/libs/cosid-core-1.8.6-jmh.jar -bm thrpt -wi <span class="token number">1</span> -rf json -f <span class="token number">1</span>
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>Benchmark                                                    Mode  Cnt        Score   Error  Units
+SnowflakeIdBenchmark.millisecondSnowflakeId_friendlyId      thrpt       4020311.665          ops/s
+SnowflakeIdBenchmark.millisecondSnowflakeId_generate        thrpt       4095403.859          ops/s
+SnowflakeIdBenchmark.safeJsMillisecondSnowflakeId_generate  thrpt        511654.048          ops/s
+SnowflakeIdBenchmark.safeJsSecondSnowflakeId_generate       thrpt        539818.563          ops/s
+SnowflakeIdBenchmark.secondSnowflakeId_generate             thrpt       4206843.941          ops/s
+</code></pre></div><h2 id="cosidintervalshardingalgorithm"><a href="#cosidintervalshardingalgorithm" class="header-anchor">#</a> CosIdIntervalShardingAlgorithm</h2> <table><thead><tr><th><strong>PreciseShardingValue</strong></th> <th><strong>RangeShardingValue</strong></th></tr></thead> <tbody><tr><td><img src="/assets/perf/sharding/Throughput-Of-IntervalShardingAlgorithm-PreciseShardingValue.png"></td> <td><img src="/assets/perf/sharding/Throughput-Of-IntervalShardingAlgorithm-RangeShardingValue.png"></td></tr></tbody></table> <div class="language-shell extra-class"><pre class="language-shell"><code>gradle cosid-shardingsphere:jmh
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code># JMH version: 1.29
+# VM version: JDK 11.0.13, OpenJDK 64-Bit Server VM, 11.0.13+8-LTS
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/work/CosId/cosid-shardingsphere/build/tmp/jmh -Duser.country=CN -Duser.language=zh -Duser.variant
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 10 s each
+# Measurement: 1 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+Benchmark                                                         (days)   Mode  Cnt         Score   Error  Units
+IntervalShardingAlgorithmBenchmark.cosid_precise_local_date_time      10  thrpt       53279788.772          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_precise_local_date_time     100  thrpt       38114729.365          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_precise_local_date_time    1000  thrpt       32714318.129          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_precise_local_date_time   10000  thrpt       22317905.643          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_precise_timestamp            10  thrpt       20028091.211          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_precise_timestamp           100  thrpt       19272744.794          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_precise_timestamp          1000  thrpt       17814417.856          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_precise_timestamp         10000  thrpt       12384788.025          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_range_local_date_time        10  thrpt       18716732.080          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_range_local_date_time       100  thrpt        8436553.492          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_range_local_date_time      1000  thrpt        1655952.254          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_range_local_date_time     10000  thrpt         185348.831          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_range_timestamp              10  thrpt        9410931.643          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_range_timestamp             100  thrpt        5792861.181          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_range_timestamp            1000  thrpt        1585344.761          ops/s
+IntervalShardingAlgorithmBenchmark.cosid_range_timestamp           10000  thrpt         196663.812          ops/s
+IntervalShardingAlgorithmBenchmark.office_precise_timestamp           10  thrpt          72189.800          ops/s
+IntervalShardingAlgorithmBenchmark.office_precise_timestamp          100  thrpt          11245.324          ops/s
+IntervalShardingAlgorithmBenchmark.office_precise_timestamp         1000  thrpt           1339.128          ops/s
+IntervalShardingAlgorithmBenchmark.office_precise_timestamp        10000  thrpt            113.396          ops/s
+IntervalShardingAlgorithmBenchmark.office_range_timestamp             10  thrpt          64679.422          ops/s
+IntervalShardingAlgorithmBenchmark.office_range_timestamp            100  thrpt           4267.860          ops/s
+IntervalShardingAlgorithmBenchmark.office_range_timestamp           1000  thrpt            227.817          ops/s
+IntervalShardingAlgorithmBenchmark.office_range_timestamp          10000  thrpt              7.579          ops/s
+</code></pre></div><h2 id="cosidmodshardingalgorithm"><a href="#cosidmodshardingalgorithm" class="header-anchor">#</a> CosIdModShardingAlgorithm</h2> <table><thead><tr><th><strong>PreciseShardingValue</strong></th> <th><strong>RangeShardingValue</strong></th></tr></thead> <tbody><tr><td><img src="/assets/perf/sharding/Throughput-Of-ModShardingAlgorithm-PreciseShardingValue.png"></td> <td><img src="/assets/perf/sharding/Throughput-Of-ModShardingAlgorithm-RangeShardingValue.png"></td></tr></tbody></table> <div class="language-shell extra-class"><pre class="language-shell"><code>gradle cosid-shardingsphere:jmh
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code># JMH version: 1.29
+# VM version: JDK 11.0.13, OpenJDK 64-Bit Server VM, 11.0.13+8-LTS
+# VM options: -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/work/CosId/cosid-shardingsphere/build/tmp/jmh -Duser.country=CN -Duser.language=zh -Duser.variant
+# Blackhole mode: full + dont-inline hint
+# Warmup: 1 iterations, 10 s each
+# Measurement: 1 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+Benchmark                                     (divisor)   Mode  Cnt          Score   Error  Units
+ModShardingAlgorithmBenchmark.cosid_precise          10  thrpt       121431137.111          ops/s
+ModShardingAlgorithmBenchmark.cosid_precise         100  thrpt       119947284.141          ops/s
+ModShardingAlgorithmBenchmark.cosid_precise        1000  thrpt       113095657.321          ops/s
+ModShardingAlgorithmBenchmark.cosid_precise       10000  thrpt       108435323.537          ops/s
+ModShardingAlgorithmBenchmark.cosid_precise      100000  thrpt        84657505.579          ops/s
+ModShardingAlgorithmBenchmark.cosid_range            10  thrpt        37397323.508          ops/s
+ModShardingAlgorithmBenchmark.cosid_range           100  thrpt        16905691.783          ops/s
+ModShardingAlgorithmBenchmark.cosid_range          1000  thrpt         2969820.981          ops/s
+ModShardingAlgorithmBenchmark.cosid_range         10000  thrpt          312881.488          ops/s
+ModShardingAlgorithmBenchmark.cosid_range        100000  thrpt           31581.396          ops/s
+ModShardingAlgorithmBenchmark.office_precise         10  thrpt         9135460.160          ops/s
+ModShardingAlgorithmBenchmark.office_precise        100  thrpt         1356582.418          ops/s
+ModShardingAlgorithmBenchmark.office_precise       1000  thrpt          104500.125          ops/s
+ModShardingAlgorithmBenchmark.office_precise      10000  thrpt            8619.933          ops/s
+ModShardingAlgorithmBenchmark.office_precise     100000  thrpt             629.353          ops/s
+ModShardingAlgorithmBenchmark.office_range           10  thrpt         5535645.737          ops/s
+ModShardingAlgorithmBenchmark.office_range          100  thrpt           83271.925          ops/s
+ModShardingAlgorithmBenchmark.office_range         1000  thrpt             911.534          ops/s
+ModShardingAlgorithmBenchmark.office_range        10000  thrpt               9.133          ops/s
+ModShardingAlgorithmBenchmark.office_range       100000  thrpt               0.208          ops/s
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ahoo-Wang/CosId/edit/main/document/docs/guide/perf-test.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/22/2022, 6:01:36 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/faq.html" class="prev">
+        常见问题
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.c699c5d8.js" defer></script><script src="/assets/js/4.0684c13d.js" defer></script><script src="/assets/js/33.473633ec.js" defer></script>
+  </body>
+</html>

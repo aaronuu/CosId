@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SnowflakeId | CosId</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <script>
+    (function (global, doc, tag, src, script, m) {
+      script = doc.createElement(tag)
+      m = doc.getElementsByTagName(tag)[0]
+      script.async = 1
+      script.src = src
+      m.parentNode.insertBefore(script, m)
+      global.dataLayer = global.dataLayer || []
+      if (!global.gtag) {
+        global.gtag = function gtag () {
+          global.dataLayer.push(arguments)
+        }
+        global.gtag('js', new Date())
+        global.gtag('config', 'G-SP6EEGK56L')
+      }
+    })(window, document, 'script', 'https://www.googletagmanager.com/gtag/js?id=G-SP6EEGK56L')
+</script>
+    <meta name="description" content="通用、灵活、高性能分布式 ID 生成器">
+    
+    <link rel="preload" href="/assets/css/0.styles.1b8f0889.css" as="style"><link rel="preload" href="/assets/js/app.c699c5d8.js" as="script"><link rel="preload" href="/assets/js/4.0684c13d.js" as="script"><link rel="preload" href="/assets/js/23.84c6ec3a.js" as="script"><link rel="prefetch" href="/assets/js/10.b4f64af2.js"><link rel="prefetch" href="/assets/js/11.60e271b2.js"><link rel="prefetch" href="/assets/js/12.cae710f0.js"><link rel="prefetch" href="/assets/js/13.fff1a3ce.js"><link rel="prefetch" href="/assets/js/14.e01acfaa.js"><link rel="prefetch" href="/assets/js/15.0097e48b.js"><link rel="prefetch" href="/assets/js/16.dca318eb.js"><link rel="prefetch" href="/assets/js/17.c32d4e56.js"><link rel="prefetch" href="/assets/js/18.c0c534ff.js"><link rel="prefetch" href="/assets/js/19.e02aaf84.js"><link rel="prefetch" href="/assets/js/20.348a8a7e.js"><link rel="prefetch" href="/assets/js/21.ecb42036.js"><link rel="prefetch" href="/assets/js/22.427e4ca3.js"><link rel="prefetch" href="/assets/js/24.a78b5423.js"><link rel="prefetch" href="/assets/js/25.2484463d.js"><link rel="prefetch" href="/assets/js/26.637d16c8.js"><link rel="prefetch" href="/assets/js/27.7eb99209.js"><link rel="prefetch" href="/assets/js/28.962f8fd3.js"><link rel="prefetch" href="/assets/js/29.84117f77.js"><link rel="prefetch" href="/assets/js/30.fe824b75.js"><link rel="prefetch" href="/assets/js/31.3b430078.js"><link rel="prefetch" href="/assets/js/32.f3b274d5.js"><link rel="prefetch" href="/assets/js/33.473633ec.js"><link rel="prefetch" href="/assets/js/34.ab2f5c85.js"><link rel="prefetch" href="/assets/js/35.1b9ae436.js"><link rel="prefetch" href="/assets/js/5.34582ba7.js"><link rel="prefetch" href="/assets/js/6.4b5ddda9.js"><link rel="prefetch" href="/assets/js/7.89b46560.js"><link rel="prefetch" href="/assets/js/8.cada40cd.js"><link rel="prefetch" href="/assets/js/9.3ba7d700.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.aec8ec70.js"><link rel="prefetch" href="/assets/js/vendors~notification.4573acaf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1b8f0889.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">CosId</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/guide/api/" class="nav-link router-link-active">
+  API
+</a></div><div class="nav-item"><a href="/guide/faq/" class="nav-link">
+  常见问题
+</a></div><div class="nav-item"><a href="/guide/perf-test/" class="nav-link">
+  性能评测
+</a></div><div class="nav-item"><a href="https://github.com/Ahoo-Wang/CosId/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  更新日志
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/Ahoo-Wang/CosId" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/config/" class="nav-link">
+  配置
+</a></div><div class="nav-item"><a href="/guide/api/" class="nav-link router-link-active">
+  API
+</a></div><div class="nav-item"><a href="/guide/faq/" class="nav-link">
+  常见问题
+</a></div><div class="nav-item"><a href="/guide/perf-test/" class="nav-link">
+  性能评测
+</a></div><div class="nav-item"><a href="https://github.com/Ahoo-Wang/CosId/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  更新日志
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/Ahoo-Wang/CosId" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/guide/getting-started.html" class="sidebar-link">快速上手</a></li><li><a href="/guide/segment-chain.html" class="sidebar-link">号段链模式</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>集成</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/cosid-jdbc.html" class="sidebar-link">CosId-Jdbc 模块</a></li><li><a href="/guide/cosid-redis.html" class="sidebar-link">CosId-Redis 模块</a></li><li><a href="/guide/cosid-zookeeper.html" class="sidebar-link">CosId-ZooKeeper 模块</a></li><li><a href="/guide/cosid-jackson.html" class="sidebar-link">CosId-Jackson 模块</a></li><li><a href="/guide/cosid-mybatis.html" class="sidebar-link">CosId-MyBatis 模块</a></li><li><a href="/guide/cosid-shardingsphere.html" class="sidebar-link">CosId-ShardingSphere 模块</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>API</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/api/" aria-current="page" class="sidebar-link">IdGenerator</a></li><li><a href="/guide/api/id-converter.html" class="sidebar-link">IdConverter</a></li><li><a href="/guide/api/provider.html" class="sidebar-link">IdGeneratorProvider</a></li><li><a href="/guide/api/snowflake.html" aria-current="page" class="active sidebar-link">SnowflakeId</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/api/snowflake.html#millisecondsnowflakeid" class="sidebar-link">MillisecondSnowflakeId</a></li><li class="sidebar-sub-header"><a href="/guide/api/snowflake.html#secondsnowflakeid" class="sidebar-link">SecondSnowflakeId</a></li><li class="sidebar-sub-header"><a href="/guide/api/snowflake.html#snowflakefriendlyid" class="sidebar-link">SnowflakeFriendlyId</a></li><li class="sidebar-sub-header"><a href="/guide/api/snowflake.html#machineiddistributor" class="sidebar-link">MachineIdDistributor</a></li><li class="sidebar-sub-header"><a href="/guide/api/snowflake.html#clockbackwardssynchronizer" class="sidebar-link">ClockBackwardsSynchronizer</a></li></ul></li><li><a href="/guide/api/segment.html" class="sidebar-link">SegmentId</a></li><li><a href="/guide/api/cosid-annotation.html" class="sidebar-link">CosIdAnnotationSupport</a></li><li><a href="/guide/api/sharding.html" class="sidebar-link">Sharding</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>常见问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/faq.html" class="sidebar-link">常见问题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>性能评测</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/perf-test.html" class="sidebar-link">JMH-Benchmark</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="snowflakeid"><a href="#snowflakeid" class="header-anchor">#</a> SnowflakeId</h1> <p>TODO</p> <h2 id="millisecondsnowflakeid"><a href="#millisecondsnowflakeid" class="header-anchor">#</a> MillisecondSnowflakeId</h2> <h2 id="secondsnowflakeid"><a href="#secondsnowflakeid" class="header-anchor">#</a> SecondSnowflakeId</h2> <h2 id="snowflakefriendlyid"><a href="#snowflakefriendlyid" class="header-anchor">#</a> SnowflakeFriendlyId</h2> <h2 id="machineiddistributor"><a href="#machineiddistributor" class="header-anchor">#</a> MachineIdDistributor</h2> <h2 id="clockbackwardssynchronizer"><a href="#clockbackwardssynchronizer" class="header-anchor">#</a> ClockBackwardsSynchronizer</h2></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Ahoo-Wang/CosId/edit/main/document/docs/guide/api/snowflake.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">5/22/2022, 6:01:36 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/api/provider.html" class="prev">
+        IdGeneratorProvider
+      </a></span> <span class="next"><a href="/guide/api/segment.html">
+        SegmentId
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.c699c5d8.js" defer></script><script src="/assets/js/4.0684c13d.js" defer></script><script src="/assets/js/23.84c6ec3a.js" defer></script>
+  </body>
+</html>
